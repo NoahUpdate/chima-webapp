@@ -1,0 +1,23 @@
+@import 'https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:opsz,wght@14..32,500&family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap';
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Engagement&family=Inter:opsz,wght@14..32,500&family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --color-pink: #f58893;
+  --color-light-pink: #fdf3f4;
+  --color-dark-pink: #e9ced1;
+  --color-cherry-pink: #f9dee2;
+  --background-image-luisaBrand: url('/src/assets/images/luisa-brand.png');
+  --background-image-luisa: url('/src/assets/images/luisa.jpg');
+  --background-image-luisacc: url('/src/assets/images/luisacc.jpg');
+  --background-image-instagram: url('/src/assets/images/ins.png');
+  --background-image-instagramn: url('/src/assets/images/insta.png');
+  --background-image-tiktok: url('/src/assets/images/tikk.png');
+  --background-image-tiktokn: url('/src/assets/images/tiktok.png');
+  --background-image-papeln: url('/src/assets/images/luisa_papel.png');
+  --background-image-home1: url('/src/assets/images/notequedes.jpg');
+  --background-image-home2: url('/src/assets/images/nuevito.jpg');
+  --font-main: 'Jost', serif;
+  --font-submain: 'Engagement', serif;
+  --shadow-sombra: 1px 1px 8px 1px rgba(0, 0, 0, 0.16);
+}
