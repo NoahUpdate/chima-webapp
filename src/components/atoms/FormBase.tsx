@@ -46,7 +46,7 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className=" p-6 mb-20 bg-white rounded-lg ">
+    <form onSubmit={handleSubmit} className=" p-6 mb-10 bg-white rounded-lg ">
       <div className="mb-6">
         <label className="block text-sm font-bold text-gray-700 mb-1">
           Tu nombre*

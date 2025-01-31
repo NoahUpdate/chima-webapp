@@ -21,4 +21,5 @@
   --font-submain: 'Engagement', serif;
   --shadow-sombra: 1px 1px 8px 1px rgba(0, 0, 0, 0.16);
   --breakpoint-on: 896px;
+  --breakpoint-mc: 1120px;
 }
