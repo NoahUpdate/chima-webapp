@@ -1,10 +1,12 @@
+import Card from '../molecules/Card'
+
 export const About = () => {
   return (
     <>
       <section className="translate-y-24">
-        <div className="h-[766px]">
+        {/* <div className="h-[766px]">
           <div className="mx-auto max-w-[1100px] h-full flex ">
-            {/* //card */}
+            //card
             <div className="rounded-[20px] shadow-sombra my-[50px] mr-[50px] w-full flex flex-col justify-center">
               <p className="text-[76px] pt-10 font-normal text-center font-submain text-dark-pink leading-6 relative flex justify-center items-center">
                 Conoce más
@@ -30,15 +32,24 @@ export const About = () => {
               <div className="w-[488px] h-full bg-luisa bg-cover"></div>
             </div>
           </div>
-        </div>
-        <div className="mx-auto max-w-[1100px] h-full flex">
-          <div className="foto-container w-[44%] py-1.5">
-            <div className="mx-5 mb-5 h-full">
-              <div className=" h-[100%] bg-luisacc bg-contain bg-no-repeat "></div>
+        </div> */}
+        <div className="h-[1532px] lg:h-[766px] ">
+          <div className="mx-5 lg:mx-auto max-w-[1100px] h-full flex max-lg:flex-col">
+            <Card button={false} />
+            <div className="max-sm:-ml-1 sm:p-5 h-full max-lg:mx-auto">
+              <div className="w-[360px] sm:w-[488px] h-full bg-luisa bg-cover bg-center"></div>
             </div>
           </div>
-          <div className="w-[56%] h-[566px] flex items-center">
-            <div className="w-full text-main text-[19px] p-12 bg-light-pink rounded-3xl font-light text-justify">
+        </div>
+        {/* segunda parte */}
+        <div className="mx-auto max-w-[1100px] h-full flex max-lg:flex-col max-lg:h-[1132px]">
+          <div className="foto-container lg:w-[44%] max-lg:h-[566px] py-1.5 max-lg:order-2">
+            <div className="mx-5 mb-5 h-full">
+              <div className="h-[466px] sm:h-full bg-luisacc bg-contain bg-no-repeat bg-center "></div>
+            </div>
+          </div>
+          <div className="w-[56%] max-lg:w-full max-lg:px-5 h-[566px] flex items-center max-lg:order-1">
+            <div className="w-full text-main text-base sm:text-[19px] p-6 sm:p-12 bg-light-pink rounded-3xl font-light text-justify">
               <p className="mb-2.5">
                 El deporte es una de mis pasiones, inspirar y demostrar que todo es posible, solo es cuestión de
                 planear, enfocarnos, tener metas y sueños claros. A través de mis redes sociales busco empoderar cada

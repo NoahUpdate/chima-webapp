@@ -17,7 +17,11 @@ const Card: React.FC<CardProps> = ({ button = false }) => {
       </p>
       <h1 className="text-[34px] lg:text-[62px]  font-bold font-main text-center tracking-[5px]">SOBRE MÍ</h1>
       <div className="relative">
-        <img src="src/assets/images/deco.png" alt="decoration2" className="transform translate-x-[412px]" />
+        <img
+          src="src/assets/images/deco.png"
+          alt="decoration2"
+          className="transform translate-x-full md:translate-x-[412px]"
+        />
       </div>
 
       <div className="text-[19px] font-main px-10 py-2.5 lg:py-5 text-justify font-light">
