@@ -1,11 +1,12 @@
 import { NavLink, Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import { FaChevronDown } from 'react-icons/fa'
+import { FaChevronDown, FaTimes } from 'react-icons/fa'
 import { FaBars } from 'react-icons/fa'
 import { Outlet } from 'react-router-dom'
 export const AppTemplate = () => {
   // Estado para almacenar si hemos hecho scroll
   const [scrolled, setScrolled] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   // Función para manejar el evento de scroll
   const handleScroll = () => {
@@ -25,6 +26,13 @@ export const AppTemplate = () => {
     }
   }, [])
 
+  const menuItems = [
+    { path: '/', name: 'INICIO' },
+    { path: '/about', name: 'SOBRE MÍ' },
+    { path: '/courses', name: 'CURSOS' },
+    { path: '/contact', name: 'CONTACTO' }
+  ]
+
   return (
     <div>
       <header
@@ -38,7 +46,43 @@ export const AppTemplate = () => {
             {/* Left section */}
 
             <div className="lg:hidden w-1/4 self-center pl-5">
-              <FaBars className="text-2xl" />
+              <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-2xl focus:outline-none">
+                {isMenuOpen ? <FaTimes /> : <FaBars />}
+              </button>
+            </div>
+
+            {/* Menú desplegable móvil */}
+            <div
+              className={`lg:hidden absolute top-full left-0 w-full bg-papeln shadow-lg transition-all duration-300 z-20 
+            ${isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
+            >
+              <div className="px-5 py-4 space-y-4 font-main text-base">
+                {menuItems.map((item) => (
+                  <NavLink
+                    key={item.path}
+                    to={item.path}
+                    onClick={() => setIsMenuOpen(false)}
+                    className={({ isActive }) =>
+                      `block text-lg ${isActive ? 'text-pink' : 'text-gray-800'} hover:text-pink transition-colors`
+                    }
+                  >
+                    {item.name}
+                  </NavLink>
+                ))}
+                {/* Enlaces a redes sociales para móvil */}
+                <div className="flex justify-center gap-6 pt-4 border-t border-pink">
+                  <Link
+                    to="https://www.instagram.com/luisachima/"
+                    target="_blank"
+                    className="bg-instagramn w-8 h-8 bg-contain bg-no-repeat"
+                  />
+                  <Link
+                    to="https://www.tiktok.com/@luisa.chima?lang=es"
+                    target="_blank"
+                    className="bg-tiktokn w-8 h-8 bg-contain bg-no-repeat"
+                  />
+                </div>
+              </div>
             </div>
 
             <div className="hidden lg:flex w-1/3 items-center justify-center text-sm font-normal tracking-[1.7px]">
@@ -218,7 +262,7 @@ export const AppTemplate = () => {
             {/* Copyright */}
             <div className="mx-5 mt-6 flex justify-center">
               <p className="text-xs my-2.5 tracking-widest text-center px-4">
-                COPYRIGHT 2023 © LUISA CHIMA. | TODOS LOS DERECHOS RESERVADOS - DISEÑO DE PÁGINAS WEB POR P&P GROUP
+                COPYRIGHT 2023 © LUISA CHIMA. | TODOS LOS DERECHOS RESERVADOS - DISEÑO DE PÁGINAS WEB POR E&E GROUP
                 S.A.S.
               </p>
             </div>

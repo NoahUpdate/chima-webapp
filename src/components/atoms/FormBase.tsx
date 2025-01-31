@@ -16,7 +16,7 @@ export default function ContactForm() {
     acceptPolicy: false
   })
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     const newErrors = {
       name: !formData.name,
@@ -33,12 +33,18 @@ export default function ContactForm() {
     }
   }
 
-  const handleChange = (e) => {
-    const { name, value, type, checked } = e.target
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value, type } = e.target
+
+        // Acceder a checked solo si es un checkbox
+        const newValue = type === 'checkbox' 
+        ? (e.target as HTMLInputElement).checked // Type assertion
+        : value;
+
     setFormData((prev) => ({
-      ...prev,
-      [name]: type === 'checkbox' ? checked : value
-    }))
+        ...prev,
+        [name]: newValue
+    }));
 
     if (value.trim()) {
       setErrors((prev) => ({ ...prev, [name]: false }))
@@ -46,7 +52,7 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className=" p-6 mb-10 bg-white rounded-lg ">
+    <form onSubmit={handleSubmit} className=" p-6 max-sm:mb-2.5 mb-4.5 lg:mb-10 bg-white rounded-lg ">
       <div className="mb-6">
         <label className="block text-sm font-bold text-gray-700 mb-1">
           Tu nombre*

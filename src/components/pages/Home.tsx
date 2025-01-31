@@ -7,11 +7,11 @@ export const Home = () => {
     <section className="w-full translate-y-24">
       <Baner />
       <Carrousel slides={slides} autoSlides={true} autoSlidesInterval={3000}></Carrousel>
-      <div className="h-[1532px] lg:h-[766px] ">
+      <div className="h-[1500px] lg:h-[766px] max-sm:h-[1250px]">
         <div className="mx-5 lg:mx-auto max-w-[1100px] h-full flex max-lg:flex-col">
           <Card button={true} />
-          <div className="p-5 h-full max-lg:mx-auto">
-            <div className="w-[488px] h-full bg-luisa bg-cover bg-center"></div>
+          <div className="sm:p-5 h-full max-lg:mx-auto">
+            <div className="max-sm:w-[320px] w-[488px] bg-luisa bg-cover bg-center sm:h-full max-sm:aspect-[2/3]"></div>
           </div>
         </div>
       </div>

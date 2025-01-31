@@ -25,7 +25,7 @@ export const Contact = () => {
     //   <Baner></Baner>
     // </div>
     <div className="translate-y-24">
-      <div className="max-w-[1100px] w-full flex flex-col max-lg:h-[1400px] lg:flex-row mx-auto">
+      <div className="max-w-[900px] w-full flex flex-col max-sm:h-[1100px] lg:flex-row mx-auto">
         {/* Sección izquierda con imagen */}
         <div className="w-full lg:w-[46%] flex items-center justify-center mt-12 lg:mt-0 order-2 lg:order-1">
           <div className=" bg-[#FCEEF0] rounded-lg " />
