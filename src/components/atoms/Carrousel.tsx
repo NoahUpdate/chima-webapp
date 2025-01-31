@@ -23,13 +23,13 @@ const Carrousel: React.FC<CarrouselProps> = ({ slides, autoSlides = false, autoS
     return () => {} // cleanup function to clear the interval on unmounting
   })
   return (
-    <div className="w-full mx-auto overflow-hidden relative">
+    <div className="w-full mx-auto overflow-hidden relative max-md:h-[370px]">
       <div
         className="flex transition-transform ease-in-out duration-900"
         style={{ transform: `translateX(-${curr * 100}%)` }}
       >
         {slides.map((s) => (
-          <img src={s} />
+          <img src={s} className="max-on:h-[370px] object-cover" />
         ))}
       </div>
       <div className="absolute inset-0 flex justify-between items-center">
