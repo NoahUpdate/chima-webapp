@@ -30,7 +30,8 @@ export const Contact = () => {
         <div className="w-full lg:w-[46%] flex items-center justify-center mt-12 lg:mt-0 order-2 lg:order-1">
           <div className=" bg-[#FCEEF0] rounded-lg " />
           <img
-            src="src/assets/images/peso-min.png"
+            src="/chima-webapp/images/peso-min.png"
+            alt='chima'
             className="py-4 w-full max-w-[80%] md:max-w-[556px] md:w-max object-cover z-50"
           />
         </div>

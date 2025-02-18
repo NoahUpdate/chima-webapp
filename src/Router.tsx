@@ -25,4 +25,7 @@ export const router = createBrowserRouter([
       }
     ]
   }
-])
+],
+{
+  basename: '/chima-webapp/'  // Aquí agregas el basename
+})

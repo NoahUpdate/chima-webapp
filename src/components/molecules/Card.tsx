@@ -10,7 +10,7 @@ const Card: React.FC<CardProps> = ({ button = false }) => {
       <p className="text-[44px] lg:text-[76px] pt-10 font-normal text-center font-submain text-dark-pink leading-6 relative flex justify-center items-center">
         Conoce más
         <img
-          src="src/assets/images/deco1.png"
+          src="/chima-webapp/images/deco1.png"
           alt="decoration1"
           className="absolute max-w-[200px] lg:max-w-[325px] pt-1.5"
         />
@@ -18,7 +18,7 @@ const Card: React.FC<CardProps> = ({ button = false }) => {
       <h1 className="text-[34px] lg:text-[62px]  font-bold font-main text-center tracking-[5px]">SOBRE MÍ</h1>
       <div className="relative">
         <img
-          src="src/assets/images/deco.png"
+          src="/chima-webapp/images/deco.png"
           alt="decoration2"
           className="transform translate-x-full md:translate-x-[412px]"
         />

@@ -1,1 +1,1 @@
-export const slides = ['src/assets/images/notequedes.jpg', 'src/assets/images/nuevito.jpg']
+export const slides = ['/chima-webapp/images/notequedes.jpg', '/chima-webapp/images/nuevito.jpg']
